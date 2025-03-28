@@ -3,19 +3,52 @@
     <head>
         <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component@1.3.x/dist/aframe-environment-component.min.js"></script>
+        
     </head>
+<body>
 <a-scene>
 <a-sound src = "C418Sweden.mp3" autoplay = "true" loop="true"></a-sound>
-<a-box color = "black" depth = "0.01" height = "1" width = "2.5" position = "0 1.85 -3"></a-box>
-<a-text value = "Hello, I am Abul Hasnat. \nI am a casual programmer and electronics enthusiast from Bangladesh. \n Feel free to explore." color= "white" position = "-1 1.85 -2.9" scale = "0.5 0.5 0.5"></a-text>
-<a-box color = "black" depth = "0.01" height = "1" width = "2.5" position = "0 1.85 2"></a-box>
-<a-text value = "Tech Stacks. \n Programming Languages:\n Python & bit of Javascript, HTML and CSS.\n Hardware: \n Arduino, Espressif and Raspberry pi" color= "white" position = "1 1.85 1.9" scale = "0.5 0.5 0.5" rotation = "180 0 180"></a-text>
-<a-box color = "black" depth = "2.5" height = "1" width = "0.01" position = "-5 1.85 -0.9"></a-box>
-<a-text value = "About me\n I am a student in Comilla Zilla School.\n I am a scout in my school's scout troop and\n have achieved Shapla Cub and \nPresident's Scout Award. I like to play games, mostly FPS and read sci-fi books in my free time(Also do some coding during free time)." color= "white" position = "-4.99 1.85 0.1" scale = "0.5 0.5 0.5" rotation = "0 90 0"></a-text>
-<a-box color = "black" depth = "3" height = "1" width = "0.01" position = "5 1.85 0.1"></a-box>
-<a-text value = "Contact\n Mail me in \n contact@hasnat4763.me \n You can find other contact info and more details in my portfolio \n hasnat4763.me" color= "white" position = "4.99 1.85 -1.2" scale = "0.5 0.5 0.5" rotation = "180 90 180"></a-text>
-
+<a-entity camera look-controls="pointerLockEnabled:true" wasd-controls>
+  <a-cursor></a-cursor>
+</a-entity>
+<a-entity
+  geometry="primitive: plane; height: 2; width: 5" material="side: double; color:black"
+  text="value: Hello, I am Abul Hasnat. \nI am a casual programmer and electronics enthusiast from Bangladesh. \n Feel free to explore.; align: center; wrapCount: 30; color: white"
+  position = "-1 1.85 -10"
+></a-entity>
+<a-entity
+  geometry="primitive: plane; height: 2; width: 5" material="side: double; color:black"
+  text="value:Tech Stacks. \n Programming Languages:\n Python & bit of Javascript, HTML and CSS.\n Hardware: \n Arduino, Espressif and Raspberry pi; align: center; wrapCount: 30; color: white"
+  position = "1 1.85 4"
+  rotation = "0 180 0"
+></a-entity>
+<a-entity
+  geometry="primitive: plane; height: 5; width: 8" material="side: double; color:black"
+  text="value:About me\n I am a student in Comilla Zilla School.\n I am a scout in my school's scout troop and\n have achieved Shapla Cub and \nPresident's Scout Award. I like to play games, mostly FPS and read sci-fi books in my free time(Also do some coding during free time).; align: center; wrapCount: 30; color: white"
+position = "-6 1.85 0.1" scale = "0.5 0.5 0.5" rotation = "0 90 0"
+></a-entity>
+<a-entity
+  geometry="primitive: plane; height: 2; width: 5" material="side: double; color:black"
+  text="value:Contact\n Mail me in \n contact@hasnat4763.me \n You can find other contact info and more details in my portfolio \n hasnat4763.me; align: center; wrapCount: 30; color: white"
+  position = "20 4 -10"
+  rotation = "0 0 0"
+  ></a-entity>
+<a-link id ="a-link" href = "https://hasnat4763.me" title = "Click to go to my Portfolio" target = "self" position = "20 1 -10" rotation = "0 0 0"  ></a-link>
+<a-video src = "ESP8266 Temp & humidity station.mp4" position = "10 2 -10" height = "5" width = "6" rotation = "0 0 0"></a-video>
+<a-entity
+  geometry="primitive: plane; height: 2; width: 5" material="side: double; color:black"
+  text="value:Projects\n I have done some projects in my free time. \n This one was the most paying in high seas known as ESP8266 weather station; align: center; wrapCount: 30; color: white"
+  position = "10 6 -10"
+></a-entity>
 <a-entity environment="preset: checkerboard; groundColor: #445; grid: cross;dressingUniformScale: false; dressingAmount: 50"></a-entity>
 
 </a-scene>
+<script>
+  document.querySelector('a-link').addEventListener('click', function () {
+    window.location.href = 'https://hasnat4763.me';
+  });
+</script>
+</body>
+
+
 </html>
